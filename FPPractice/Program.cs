@@ -6,9 +6,7 @@ namespace FPPractice
     {
         static void Main(string[] args)
         {
-            var test = ClassicDelegation.Eval(1, '*', 4);
-            Console.WriteLine(test);
-
+            var a = PartialFunctionApplication.ListAdd(1,2,3,5,6);
         }
     }
 }
