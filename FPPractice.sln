@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPPractice", "FPPractice\FPPractice.csproj", "{0423AFD8-14B8-4874-BCB7-23C44764AF99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPPractice", "FPPractice\FPPractice.csproj", "{0423AFD8-14B8-4874-BCB7-23C44764AF99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FPPractice.Test", "FPPractice.Test\FPPractice.Test.csproj", "{2505E21B-86E1-49AA-8CEC-668B6C662F59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FPPPractice.API", "FPPPractice.API\FPPPractice.API.csproj", "{2EBB444E-A986-4232-AB1F-6FE35B2C5B09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{0423AFD8-14B8-4874-BCB7-23C44764AF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0423AFD8-14B8-4874-BCB7-23C44764AF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0423AFD8-14B8-4874-BCB7-23C44764AF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2505E21B-86E1-49AA-8CEC-668B6C662F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2505E21B-86E1-49AA-8CEC-668B6C662F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2505E21B-86E1-49AA-8CEC-668B6C662F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2505E21B-86E1-49AA-8CEC-668B6C662F59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EBB444E-A986-4232-AB1F-6FE35B2C5B09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EBB444E-A986-4232-AB1F-6FE35B2C5B09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EBB444E-A986-4232-AB1F-6FE35B2C5B09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EBB444E-A986-4232-AB1F-6FE35B2C5B09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
