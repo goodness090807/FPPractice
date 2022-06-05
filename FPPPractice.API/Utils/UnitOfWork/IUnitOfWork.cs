@@ -14,5 +14,6 @@ namespace FPPPractice.API.Utils.UnitOfWork
         /// </summary>
         TRepo Repository<TRepo>() where TRepo : IRepositoryBase;
         void Commit();
+        void Rollback();
     }
 }

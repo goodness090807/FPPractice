@@ -1,4 +1,5 @@
 ﻿using FPPPractice.API.Controllers.Customer.Dtos;
+using FPPPractice.API.Exceptions;
 using FPPPractice.API.Repositories.Customer;
 using FPPPractice.API.Utils.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
@@ -6,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace FPPPractice.API.Controllers.Customer
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CustomerController : ControllerBase
+    public class CustomerController : BaseController
     {
         private readonly IUnitOfWork _unitOfWork;
 
@@ -33,8 +32,13 @@ namespace FPPPractice.API.Controllers.Customer
             await _unitOfWork.Repository<ICustomerRepository>().InsertCustomerAsync(
                 new Repositories.Customer.Models.Dtos.InsertCustomerDto(customer.Name));
 
-            _unitOfWork.Commit();
 
+            await _unitOfWork.Repository<ICustomerRepository>().InsertCustomerAsync(
+                new Repositories.Customer.Models.Dtos.InsertCustomerDto(customer.Name + "2"));
+
+            throw new BadRequestException("測試錯誤");
+            // 因為錯誤了，所以沒有Commit，會自動被Rollback
+            _unitOfWork.Commit();
             return Ok();
         }
     }

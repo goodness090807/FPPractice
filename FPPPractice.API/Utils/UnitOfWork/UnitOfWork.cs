@@ -56,6 +56,12 @@ namespace FPPPractice.API.Utils.UnitOfWork
             }
         }
 
+        public void Rollback()
+        {
+            _transaction.Rollback();
+            Dispose();
+        }
+
         public void Dispose()
         {
             dispose(true);
@@ -70,6 +76,8 @@ namespace FPPPractice.API.Utils.UnitOfWork
                 {
                     if (_transaction != null)
                     {
+                        // 如果交易被關掉或是下面的連線被關掉
+                        // 就會將transaction做Rollback
                         _transaction.Dispose();
                         _transaction = null;
                     }
